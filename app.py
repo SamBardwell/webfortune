@@ -5,10 +5,6 @@ from flask import (
 app = Flask(__name__)
 import subprocess
 
-@app.errorhandler(404)
-def page_not_found(e):
-    return redirect(url_for('fortune'))
-
 @app.route('/')
 def index():
     return redirect(url_for('fortune'))
