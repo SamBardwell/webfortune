@@ -4,7 +4,7 @@ from flask import (
 )
 app = Flask(__name__)
 import subprocess
-# a test
+
 @app.route('/')
 def index():
     return redirect(url_for('fortune'))
