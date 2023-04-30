@@ -39,5 +39,6 @@ To run this web application with docker follow these directions
 * Build the docker ```docker build -t bardsam/webfortune .```
 * Run the docker container ```docker run -dp <anyportnumber>:5000 bardsam/webfortune```
 * Go to the url with your port number ```http://10.92.21.106:<previousportnumber>/```
+* Can navigate to the same routes as the local directions
 * When you are done type ```docker ps``` to see the name of your docker container
 * Take that name and put it in this command to end container ```docker rm -f <nameofcontainer>```
