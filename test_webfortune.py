@@ -13,7 +13,7 @@ def test_fortune(app, client):
     res = client.get('/fortune/')
     assert res.status_code == 200
     page_output = res.get_data(as_text=True)
-    assert page_output
+    assert '<pre>' in page_output
 
 def test_cowsay(app, client):
     message = 'hello'
@@ -27,5 +27,5 @@ def test_cowfortune(app, client):
     res = client.get('/cowfortune/')
     assert res.status_code == 200
     page_output = res.get_data(as_text=True)
-    assert page_output
+    assert '<pre>' in page_output
     assert 'oo' in page_output
